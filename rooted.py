@@ -25,7 +25,7 @@ def Clear():
   else:
     os.system('cls')
 
-__config__, __proxies__, __lock__ = json.load(open('./config.json')), itertools.cycle(open('./data/proxies.txt').read().splitlines()), threading.Lock()
+__config__, __proxies__, __lock__ = json.load(open('./config.json')), itertools.cycle(open('./proxies.txt').read().splitlines()), threading.Lock()
 
 class GenThread(threading.Thread):
     def __init__(self):
